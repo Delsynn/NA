@@ -1,4 +1,4 @@
 # NA
 ## Repository for final exercise of network applications
 
-Added the initial yamls to deploy on our cluster.
+Gateway API, not so easy, so let's try with just a docker
