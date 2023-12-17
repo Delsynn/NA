@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mindustry-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mindustry-server
+  template:
+    metadata:
+      labels:
+        app: mindustry-server
+    spec:
+      containers:
+      - name: mindustry-server
+        image: oldshensheep/mindustry-server:latest
+        imagePullPolicy: Always
+        ports:
+        - name: tcp-port
+          containerPort: 6567
+          protocol: TCP
+        - name: udp-port
+          containerPort: 6567
+          protocol: UDP
